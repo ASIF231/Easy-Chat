@@ -124,8 +124,6 @@ public class specificchat extends AppCompatActivity {
                 }
             });
 
-
-
             backbuttonspecificchat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

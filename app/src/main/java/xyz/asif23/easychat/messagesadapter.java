@@ -36,7 +36,7 @@ public class messagesadapter extends RecyclerView.Adapter {
         }
         else
         {
-            View view = LayoutInflater.from(context).inflate(R.layout.senderchatlayout,parent,false);
+            View view = LayoutInflater.from(context).inflate(R.layout.receiverchatlayout,parent,false);
             return new ReceiverViewHolder(view);
         }
 
@@ -61,8 +61,8 @@ public class messagesadapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemViewType(int position) {
-        messages messages = messagesArrayList.get(position);
-        if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals(messages.getSenderId()))
+        messages message = messagesArrayList.get(position);
+        if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals(message.getSenderId()))
         {
             return ITEM_SEND;
         }
