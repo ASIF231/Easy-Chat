@@ -17,6 +17,8 @@ import android.view.View;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import android.content.*;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 
@@ -25,7 +27,8 @@ public class chatActivity extends AppCompatActivity {
     TabItem mchat,mstatus,mcall;
     ViewPager viewPager;
     PagerAdapter pagerAdapter;
-
+    ImageButton search_Open;
+    EditText search_user;
     androidx.appcompat.widget.Toolbar mtoolbar;
 
     @Override
@@ -41,6 +44,16 @@ public class chatActivity extends AppCompatActivity {
 
         mtoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);
+        search_Open=findViewById(R.id.open_search_bar);
+        search_user = findViewById(R.id.search_user);
+        search_Open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                search_user.setVisibility(View.VISIBLE);
+                search_Open.setVisibility(View.INVISIBLE);
+            }
+        });
+
 
         pagerAdapter = new pagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);

@@ -23,7 +23,29 @@
                 android:text="Easy Chat"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:id="@+id/search_user"
+                android:visibility="invisible"
+                />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/open_search_bar"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/white"
+                android:layout_marginRight="50dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_centerVertical="true"
                 />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
