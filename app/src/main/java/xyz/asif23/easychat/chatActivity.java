@@ -55,6 +55,7 @@ public class chatActivity extends AppCompatActivity {
         });
 
 
+
         pagerAdapter = new pagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
 

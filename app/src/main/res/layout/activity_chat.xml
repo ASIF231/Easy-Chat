@@ -35,6 +35,7 @@
                 android:drawableStart="@drawable/ic_baseline_search_24"
                 android:id="@+id/search_user"
                 android:visibility="invisible"
+                android:singleLine="true"
                 />
             <ImageButton
                 android:layout_width="40dp"
@@ -42,7 +43,7 @@
                 android:id="@+id/open_search_bar"
                 android:layout_alignParentEnd="true"
                 app:tint="@color/white"
-                android:layout_marginRight="50dp"
+                android:layout_marginRight="20dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_baseline_search_24"
                 android:layout_centerVertical="true"
